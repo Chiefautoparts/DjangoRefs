@@ -1,0 +1,18 @@
+body {
+	background-color: #161616;
+	color: #C1B578;
+	
+}
+
+h1 {
+	font-size: 6em;
+	text-align: center;
+	text-shadow: -4px -4px 2px #FFFFFF;
+}
+
+h2 {
+	font-size: 3em;
+	text-align: center;
+	text-decoration: underline;
+}
+

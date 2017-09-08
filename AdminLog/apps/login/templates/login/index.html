@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Fantasy Refs</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'login/css/index.css' %}">
+</head>
+<body>
+	<h1>Fantasy Referees</h1>
+	<h2>It's like standard fantasy Football but points are only earned from the refs</h2>
+	<h4>Register New User</h4>
+	<form action="auth" method="POST">
+		{% csrf_token %}
+		<label for="name">Name: </label><br>	
+		<input type="text" name="name"><br><br>
+		<label for="username">Username: </label><br>	
+		<input type="text" name="username"><br><br>
+		<label for="email">Email: </label><br>	
+		<input type="text" name="email"><br><br>
+		<label for="password">Password: </label><br>	
+		<input type="password" name="password"><br><br>
+		<label for="confPassword">Confirm Password: </label><br>	
+		<input type="password" name="confPassword"><br><br>
+		<input type="submit" name="submit" value="Register">
+	</form><br><br>
+	<h4>Already a User? Login Here</h4>
+	<form action="login" method="POST">
+		{% csrf_token %}
+		<label for="email">Email: </label><br>
+		<input type="text" name="email"><br><br>
+		<label for="password">Password: </label><br>
+		<input type="password" name="password"><br><br>
+		<input type="submit" name="submit" value="LOGIN">
+	</form>
+	
+</body>
+</html>
